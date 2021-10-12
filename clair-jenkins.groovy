@@ -12,12 +12,12 @@ node {
     	"""       
     }
     stage('📁️ Downloading Clair') {
-      // sh"""
-      // wget https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_linux_amd64
-      //  mv clair-scanner_linux_amd64 clair-scanner && sudo chmod +x clair-scanner
-      //  ls -la
-      // pwd 
-      //  """
+      sh"""
+        wget https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_linux_amd64
+        mv clair-scanner_linux_amd64 clair-scanner && sudo chmod +x clair-scanner
+        ls -la
+        pwd 
+      """
     }
     stage('📁Starting Scan') {
      sh "sudo ./clair-scanner --ip 172.17.0.1 -r report.json ubuntu:18.04 || exit 0 "
