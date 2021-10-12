@@ -16,7 +16,7 @@ node {
       // wget https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_linux_amd64
       //  mv clair-scanner_linux_amd64 clair-scanner && sudo chmod +x clair-scanner
       //  ls -la
-      // pwd
+      // pwd 
       //  """
     }
     stage('📁Starting Scan') {
